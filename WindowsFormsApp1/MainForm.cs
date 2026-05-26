@@ -59,8 +59,8 @@ namespace WindowsFormsApp1
                                   let price_three = prices.Skip(2).FirstOrDefault()
                                   let price_three_usd = price_three /usd_rate
                                     // Линейная экстраполяция по МНК (прогноз на 1 шаг вперед)
-                                    // Формула: Forecast = (4*P_latest + P_middle - 2*P_oldest) / 3
-                                    let forecast = (4 * price_one + price_two - 2 * price_three) / 3m
+                                    
+                                    let forecast = 3 * price_three - 3 * price_two + price_one
 
                                     // Расчеты для отображения
                                     let current_price_usd = price_one / usd_rate
